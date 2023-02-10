@@ -92,6 +92,18 @@ i {
   background-size: contain;
   background-position: center;
 }
+.Clear {
+  background-image: url(https://cdn-icons-png.flaticon.com/512/979/979585.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left;
+}
+.Clouds {
+  background-image: url(https://cdn-icons-png.flaticon.com/512/5980/5980685.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left;
+}
 
 .detail-wrapper {
   background-color: rgba(70, 99, 137, 0.416);
@@ -109,6 +121,9 @@ i {
 .card {
   font-size: 1.3rem;
   margin-block: 5px;
+}
+.card:hover {
+  cursor: pointer;
 }
 #search-button {
   height: 2em;

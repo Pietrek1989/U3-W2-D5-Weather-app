@@ -3,9 +3,9 @@ import { Card } from "react-bootstrap";
 const Weather5 = (props) => {
   return (
     <>
-      {props.fiveDays.map((singleDay, i) => {
+      {props.fiveDays.map((singleDay) => {
         return (
-          <Card border="dark" className={singleDay.weather[0].main} key={i}>
+          <Card border="dark" className={singleDay.weather[0].main}>
             <Card.Header className="text-dark">
               <strong>{singleDay.dt_txt}</strong>
             </Card.Header>

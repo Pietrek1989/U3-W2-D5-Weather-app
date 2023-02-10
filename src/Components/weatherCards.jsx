@@ -12,6 +12,7 @@ const WeatherCards = (props) => {
       );
       if (response.ok) {
         let data = await response.json();
+        console.log(data.weather[0]);
         setWeatherObj(data);
         setWeatherArray(data.weather[0]);
       } else {

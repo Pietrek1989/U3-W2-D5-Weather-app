@@ -14,7 +14,7 @@ const Main = () => {
   const fetchWeather = async (city) => {
     try {
       let response = await fetch(
-        `https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=ed25fec635fe1f440571593fc2ef46e5`
+        `https://api.openweathermap.org/data/2.5/weather?q=${city}&APPID=ed25fec635fe1f440571593fc2ef46e5&units=metric`
       );
       if (response.ok) {
         let data = await response.json();
@@ -34,13 +34,13 @@ const Main = () => {
   const fetchWeather5 = async (cityName) => {
     try {
       let response = await fetch(
-        `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=ed25fec635fe1f440571593fc2ef46e5`
+        `https://api.openweathermap.org/data/2.5/forecast?q=${cityName}&appid=ed25fec635fe1f440571593fc2ef46e5&units=metric`
       );
       if (response.ok) {
         let data5 = await response.json();
         console.log(response);
         console.log(data5.list);
-        let arrayOf5 = data5.list.slice(1, 5);
+        let arrayOf5 = data5.list.slice(0, 5);
         console.log(arrayOf5);
         setWeatherObj5(arrayOf5);
       } else {
@@ -72,6 +72,7 @@ const Main = () => {
             }}
           />
           <Button
+            variant="info"
             id="search-button"
             onClick={() => {
               fetchWeather(search);
@@ -105,7 +106,9 @@ const Main = () => {
                     </div>
                   </div>
                 </div>
-                <Weather5 fiveDays={weatherObj5}></Weather5>
+                <div className="d-flex">
+                  <Weather5 fiveDays={weatherObj5}></Weather5>
+                </div>
               </>
             )}
           </Col>
