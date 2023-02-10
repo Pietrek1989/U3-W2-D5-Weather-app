@@ -40,7 +40,7 @@ const Main = () => {
         let data5 = await response.json();
         console.log(response);
         console.log(data5.list);
-        let arrayOf5 = data5.list.slice(0, 12);
+        let arrayOf5 = data5.list.slice(0, 16);
         console.log(arrayOf5);
         setWeatherObj5(arrayOf5);
       } else {
@@ -106,7 +106,7 @@ const Main = () => {
                     </div>
                   </div>
                 </div>
-                <div className="d-flex flex-wrap">
+                <div className="d-flex days-wrapper">
                   <Weather5 fiveDays={weatherObj5}></Weather5>
                 </div>
               </>
@@ -143,11 +143,6 @@ const Main = () => {
               getDetails={getDetails}
               city={"Barcelona"}
               country="es"
-            ></WeatherCards>
-            <WeatherCards
-              getDetails={getDetails}
-              city={"Innsbruck"}
-              country="at"
             ></WeatherCards>
             <WeatherCards
               getDetails={getDetails}

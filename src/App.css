@@ -27,7 +27,7 @@
 
 /* .App-link {
   color: #61dafb;
-}
+} */
 
 @keyframes App-logo-spin {
   from {
@@ -36,7 +36,7 @@
   to {
     transform: rotate(360deg);
   }
-} */
+}
 
 a {
   text-decoration: none !important;
@@ -79,6 +79,9 @@ i {
 .fa-sun {
   color: yellow;
 }
+.animation {
+  animation: App-logo-spin 1s;
+}
 
 #Clear {
   background-image: url(https://cdn-icons-png.flaticon.com/512/979/979585.png);
@@ -87,6 +90,12 @@ i {
   background-position: center;
 }
 #Clouds {
+  background-image: url(https://cdn-icons-png.flaticon.com/512/3313/3313983.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+#Rain {
   background-image: url(https://cdn-icons-png.flaticon.com/512/5980/5980685.png);
   background-repeat: no-repeat;
   background-size: contain;
@@ -128,8 +137,24 @@ i {
   background-position: left;
 }
 .Clouds {
+  background-image: url(https://cdn-icons-png.flaticon.com/512/3313/3313983.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: left;
+}
+.Rain {
   background-image: url(https://cdn-icons-png.flaticon.com/512/5980/5980685.png);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: left;
+}
+
+.day-cards {
+  max-width: 20vw;
+  min-height: 35vh;
+  max-width: 20vw;
+  max-height: 35vh;
+}
+.days-wrapper {
+  overflow: auto;
 }
