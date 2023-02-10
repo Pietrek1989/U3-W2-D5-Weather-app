@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { Row, Container, Col, InputGroup, Form, Button } from "react-bootstrap";
 import Weather5 from "./Weather5";
 import WeatherCards from "./weatherCards";
@@ -40,7 +40,7 @@ const Main = () => {
         let data5 = await response.json();
         console.log(response);
         console.log(data5.list);
-        let arrayOf5 = data5.list.slice(0, 5);
+        let arrayOf5 = data5.list.slice(0, 12);
         console.log(arrayOf5);
         setWeatherObj5(arrayOf5);
       } else {
@@ -102,17 +102,18 @@ const Main = () => {
                     </div>
                     <div>
                       <p>Humidity: {weatherMain.humidity}</p>
-                      <p>Feels like: {weatherMain.pressure}</p>
+                      <p>Pressure: {weatherMain.pressure}</p>
                     </div>
                   </div>
                 </div>
-                <div className="d-flex">
+                <div className="d-flex flex-wrap">
                   <Weather5 fiveDays={weatherObj5}></Weather5>
                 </div>
               </>
             )}
           </Col>
           <Col xs={12} lg={3}>
+            <h5>TODAY AROUND THE WORLD</h5>
             <WeatherCards
               getDetails={getDetails}
               city={"London"}

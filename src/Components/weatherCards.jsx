@@ -4,6 +4,7 @@ import { Card } from "react-bootstrap";
 const WeatherCards = (props) => {
   const [weatherObj, setWeatherObj] = useState({});
   const [weatherArray, setWeatherArray] = useState([]);
+  const [weatherMain, setWeatherMain] = useState([]);
 
   const fetchWeather = async () => {
     try {
@@ -15,6 +16,7 @@ const WeatherCards = (props) => {
         console.log(data.weather[0]);
         setWeatherObj(data);
         setWeatherArray(data.weather[0]);
+        setWeatherMain(data.main);
       } else {
         // eslint-disable-next-line no-throw-literal
         throw response.status + " " + response.statusText;
@@ -29,14 +31,18 @@ const WeatherCards = (props) => {
   }, []);
 
   return (
-    <Card border="dark" onClick={() => props.getDetails(weatherObj)}>
+    <Card
+      border="dark"
+      onClick={() => props.getDetails(weatherObj)}
+      className={weatherArray.main}
+    >
       <Card.Header className="text-dark">
         <strong>{weatherObj.name}</strong>
       </Card.Header>
       <Card.Body className="text-dark">
         {/* <Card.Title>{weatherObj.main.temp}</Card.Title> */}
         <Card.Text>
-          <span>{weatherArray.main}</span>
+          <span>{parseInt(weatherMain.temp)} C°</span>
         </Card.Text>
       </Card.Body>
     </Card>
