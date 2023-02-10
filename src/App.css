@@ -1,8 +1,9 @@
 .App {
   text-align: center;
+  background-color: #3c4049;
 }
 
-.App-logo {
+/* .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
@@ -11,10 +12,10 @@
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
+} */
 
 .App-header {
-  background-color: #282c34;
+  background-color: #3c4049;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -24,7 +25,7 @@
   color: white;
 }
 
-.App-link {
+/* .App-link {
   color: #61dafb;
 }
 
@@ -35,4 +36,84 @@
   to {
     transform: rotate(360deg);
   }
+} */
+
+a {
+  text-decoration: none !important;
+  cursor: pointer;
+}
+.navbar {
+  background-color: transparent;
+}
+.navbar .nav-link {
+  color: white !important;
+}
+.navbar .nav-link:hover {
+  color: yellow !important;
+}
+.navbar-light .navbar-brand:hover .logo {
+  cursor: pointer;
+  color: yellow !important;
+}
+
+#active {
+  color: white !important;
+}
+
+.navbar-toggler-icon {
+  background-color: white !important;
+  border-radius: 3px;
+}
+
+#search-field {
+  background: transparent;
+}
+#inputGroup-sizing-sm {
+  background: transparent;
+}
+i {
+  color: white;
+  font-weight: bolder;
+  cursor: pointer;
+}
+.fa-sun {
+  color: yellow;
+}
+
+#Clear {
+  background-image: url(https://cdn-icons-png.flaticon.com/512/979/979585.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+#Clouds {
+  background-image: url(https://cdn-icons-png.flaticon.com/512/5980/5980685.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.detail-wrapper {
+  background-color: rgba(70, 99, 137, 0.416);
+  border-radius: 10px;
+  height: 95vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: inherit;
+  padding-inline: 1em;
+}
+.detail-wrapper div p {
+  padding-block: 5px;
+}
+.card {
+  font-size: 1.3rem;
+  margin-block: 5px;
+}
+#search-button {
+  height: 2em;
+}
+
+#inputGroup-sizing-sm {
+  height: 1.3em;
 }
