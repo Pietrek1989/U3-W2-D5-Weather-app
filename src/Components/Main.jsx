@@ -41,7 +41,7 @@ const Main = () => {
         let data5 = await response.json();
         console.log(response);
         console.log(data5.list);
-        let arrayOf5 = data5.list.slice(0, 16);
+        let arrayOf5 = data5.list;
         console.log(arrayOf5);
         setWeatherObj5(arrayOf5);
       } else {
