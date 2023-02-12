@@ -158,3 +158,32 @@ i {
 .days-wrapper {
   overflow: auto;
 }
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #3c4049;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(35, 85, 149);
+  border-radius: 5px;
+  width: 15px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(53, 117, 200, 0.899);
+}
+#search-button {
+  background-color: rgb(35, 85, 149);
+  border: none;
+}
+#search-button:hover {
+  background-color: rgba(53, 117, 200, 0.899);
+}

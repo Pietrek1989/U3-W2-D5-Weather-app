@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Row, Container, Col, InputGroup, Form, Button } from "react-bootstrap";
 import Weather5 from "./Weather5";
 import WeatherCards from "./weatherCards";
@@ -10,6 +10,7 @@ const Main = () => {
   const [weatherMain, setWeatherMain] = useState({});
   const [search, setSearch] = useState(" ");
   const [cityName, setCityName] = useState("");
+  const [active, setactive] = useState(false);
 
   const fetchWeather = async (city) => {
     try {
@@ -51,7 +52,13 @@ const Main = () => {
       console.log(error);
     }
   };
-
+  const toggleClass = () => {
+    setactive(true);
+  };
+  useEffect(() => {
+    toggleClass();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [weatherObj]);
   const getDetails = (object) => {
     setWeatherObj(object);
     setWeatherArray(object.weather[0]);
@@ -88,7 +95,9 @@ const Main = () => {
             {weatherObj && (
               <>
                 <div className="detail-wrapper mt-5">
-                  <h1>{weatherObj.name.toUpperCase()}</h1>
+                  <h1 className={active ? "animation" : ""}>
+                    {weatherObj.name.toUpperCase()}
+                  </h1>
                   <h5>TODAY: {weatherArray.description.toUpperCase()}</h5>
                   <div
                     className="d-flex justify-content-between "
