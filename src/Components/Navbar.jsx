@@ -1,5 +1,5 @@
 import { Nav, Navbar } from "react-bootstrap";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const NavBar = (props) => {
   //   const location = useLocation();
@@ -15,7 +15,7 @@ const NavBar = (props) => {
       <Navbar.Toggle aria-controls="responsive-navbar-nav" />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav>
-          <Link to="/">
+          {/* <Link to="/">
             <div
               className="nav-link"
               //   id={location.pathname === "/movies" ? "active" : ""}
@@ -30,7 +30,7 @@ const NavBar = (props) => {
             >
               Something
             </div>
-          </Link>
+          </Link> */}
         </Nav>
       </Navbar.Collapse>
     </Navbar>
