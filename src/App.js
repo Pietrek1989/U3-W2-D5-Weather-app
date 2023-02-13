@@ -4,13 +4,10 @@ import Main from "./Components/Main";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import NavBar from "./Components/Navbar";
 
-// import NavBar from "./Components/Navbar";
-
 function App() {
   return (
     <div className="App">
       <BrowserRouter>
-        {/* <NavBar></NavBar> */}
         <NavBar></NavBar>
         <header className="App-header">
           <Routes>
