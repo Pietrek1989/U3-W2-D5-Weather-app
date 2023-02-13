@@ -36,8 +36,21 @@ const WeatherCards = (props) => {
       onClick={() => props.getDetails(weatherObj)}
       className={weatherArray.main}
     >
-      <Card.Header className="text-dark">
-        <strong>{weatherObj.name}</strong>
+      <Card.Header className="text-dark d-flex justify-content-center position-relative">
+        <div>
+          <strong>{weatherObj.name}</strong>
+        </div>
+        <div>
+          <span className="align-self-end">
+            <img
+              className="pr-auto flag"
+              src={props.flag}
+              alt="uk-flag"
+              width="25px"
+              height="15px"
+            ></img>
+          </span>
+        </div>
       </Card.Header>
       <Card.Body className="text-dark">
         {/* <Card.Title>{weatherObj.main.temp}</Card.Title> */}

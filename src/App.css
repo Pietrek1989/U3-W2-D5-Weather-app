@@ -187,3 +187,9 @@ i {
 #search-button:hover {
   background-color: rgba(53, 117, 200, 0.899);
 }
+
+.flag {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+}
