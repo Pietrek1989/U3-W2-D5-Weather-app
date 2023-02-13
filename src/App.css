@@ -171,7 +171,7 @@ i {
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: rgb(35, 85, 149);
+  background: white;
   border-radius: 5px;
   width: 15px;
 }

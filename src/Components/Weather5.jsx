@@ -9,8 +9,8 @@ const Weather5 = (props) => {
         const weather = singleDay.weather[0].main;
         const temp = singleDay.main.temp;
         return (
-          <Col className="p-0">
-            <Card border="dark" className={`day-cards ${weather}`} key={i}>
+          <Col className="p-0" key={i}>
+            <Card border="dark" className={`day-cards ${weather}`}>
               <Card.Header className="text-dark">
                 {/* <strong>{singleDay.dt_txt}</strong> */}
                 {format(parseISO(singleDay.dt_txt), " ccc  kk':'mm")}

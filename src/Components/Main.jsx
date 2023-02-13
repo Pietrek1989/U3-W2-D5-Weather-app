@@ -5,7 +5,7 @@ import WeatherCards from "./weatherCards";
 
 const Main = () => {
   const [weatherObj, setWeatherObj] = useState(false);
-  const [weatherObj5, setWeatherObj5] = useState(false);
+  const [weatherObj5, setWeatherObj5] = useState([]);
   const [weatherArray, setWeatherArray] = useState([]);
   const [weatherMain, setWeatherMain] = useState({});
   const [search, setSearch] = useState(" ");
